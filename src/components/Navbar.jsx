@@ -20,7 +20,7 @@ function Navbar() {
             </div>
             <ul className="hidden lg:flex ml-14 space-x-12">
               {navItems.map((item, index) => (
-                <li key={index}>
+                <li key={index} className="py-4 px-3">
                   <a href={item.href}>{item.label}</a>
                 </li>
               ))}
@@ -46,7 +46,10 @@ function Navbar() {
             <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
               <ul>
                 {navItems.map((item, index) => (
-                  <li key={index}>
+                  <li
+                    key={index}
+                    className="w-[40%] mr-[5%] text-right text-white py-2 "
+                  >
                     <a href={item.href}>{item.label}</a>
                   </li>
                 ))}
