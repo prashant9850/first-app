@@ -9,15 +9,17 @@ function Navbar() {
   const toggleNavbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
   };
+
   return (
     <>
-      <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80 font-[Poppins]">
+      <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80 font-[Poppins] bg-black">
         <div className="container px-4 mx-auto relative text-sm">
           <div className="flex justify-between items-center">
             <div className="flex items-center flex-shrink-0">
               <img src={logo} alt="logo" className="h-10 w-10 mr-2" />
               <span className="text-xl tracking-tight">virtualR</span>
             </div>
+
             <ul className="hidden lg:flex ml-14 space-x-12">
               {navItems.map((item, index) => (
                 <li key={index} className="py-4 px-3">
@@ -25,6 +27,7 @@ function Navbar() {
                 </li>
               ))}
             </ul>
+
             <div className="hidden lg:flex justify-center space-x-12 items-center">
               <a href="#" className="py-2 px-3 border rounded-md">
                 Sign In
@@ -36,20 +39,20 @@ function Navbar() {
                 Create an Account
               </a>
             </div>
+
             <div className="lg:hidden md:flex flex-col justify-end">
               <button onClick={toggleNavbar}>
                 {mobileDrawerOpen ? <X /> : <Menu />}
               </button>
             </div>
           </div>
+
+          {/* Mobile Menu - shown only when mobileDrawerOpen is true */}
           {mobileDrawerOpen && (
-            <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
-              <ul>
+            <div className="absolute right-4 mt-2 z-40 bg-neutral-900 w-fit p-4 flex flex-col items-end rounded-md shadow-lg lg:hidden">
+              <ul className="flex flex-col space-y-4 pr-2 pt-2">
                 {navItems.map((item, index) => (
-                  <li
-                    key={index}
-                    className="w-[40%] mr-[5%] text-right text-white py-2 "
-                  >
+                  <li key={index} className="text-white">
                     <a href={item.href}>{item.label}</a>
                   </li>
                 ))}
