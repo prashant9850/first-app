@@ -1,48 +1,50 @@
-import React, { useState } from "react";
-
-const getRandomColor = () => {
-  const colors = [
-    "bg-red-500",
-    "bg-blue-500",
-    "bg-green-500",
-    "bg-yellow-500",
-    "bg-purple-500",
-    "bg-pink-500",
-    "bg-orange-500",
-    "bg-cyan-500",
-  ];
-  return colors[Math.floor(Math.random() * colors.length)];
-};
+import React from "react";
+import video1 from "../assets/video1.mp4";
+import video2 from "../assets/video2.mp4";
 
 const HeroSection = () => {
-  const [card1Color, setCard1Color] = useState(getRandomColor());
-  const [card2Color, setCard2Color] = useState(getRandomColor());
-
-  const handleCard1Click = () => {
-    setCard1Color(getRandomColor());
-  };
-
-  const handleCard2Click = () => {
-    setCard2Color(getRandomColor());
-  };
-
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-900">
-      <div className="flex gap-8">
-        <div
-          className={`w-48 h-64 rounded-xl shadow-lg cursor-pointer transition-all duration-300 ${card1Color}`}
-          onClick={handleCard1Click}
-        >
-          <p className="text-white text-center mt-28 font-semibold">Card 1</p>
+    <>
+      <div className="flex flex-col mt-5 items-center lg:mt-20">
+        <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
+          VirtualR build tools
+        </h1>
+        <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
+          <span className="bg-gradient-to-r from-orange-500 to bg-orange-800 text-transparent bg-clip-text">
+            {" "}
+            for developers
+          </span>
+        </h1>
+        <div>
+          <p className="text-center mt-9 text-2xl">
+            Enpower your creativity and bring your VR apps ideas to life with
+            our invite development tools.
+          </p>
+          <p className="text-center mt-3 text-2xl">
+            Get startes today and turn your imagination into immersive reality!
+          </p>
         </div>
-        <div
-          className={`w-48 h-64 rounded-xl shadow-lg cursor-pointer transition-all duration-300 ${card2Color}`}
-          onClick={handleCard2Click}
-        >
-          <p className="text-white text-center mt-28 font-semibold">Card 2</p>
+
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-8 px-4 w-full">
+          <video
+            src={video1}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full md:w-[550px] lg:w-[600px] rounded-lg border-4 border-orange-500"
+          />
+          <video
+            src={video2}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full md:w-[550px] lg:w-[600px] rounded-lg border-4 border-orange-500"
+          />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

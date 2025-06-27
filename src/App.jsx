@@ -9,10 +9,9 @@ function App() {
     <>
       <div className="min-h-screen bg-black text-white">
         <Navbar />
-        <div className="max-w-7xl pt-20 mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <HeroSection />
         </div>
-        <Footer />
       </div>
     </>
   );
