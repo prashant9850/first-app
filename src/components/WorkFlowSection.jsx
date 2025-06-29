@@ -1,10 +1,10 @@
 import code from "../assets/code.jpg";
 import { checklistItems } from "../constants";
-import { CheckCircle2 } from "lucide-react"; // optional check icon
+import { CheckCircle2 } from "lucide-react";
 
 const WorkFlowSection = () => {
   return (
-    <div className="relative mt-32 mb-32 text-center">
+    <div className="relative  text-center">
       <h1 className="mt-4 text-3xl sm:text-5xl lg:text-6xl">
         Accelerate your
         <span className="bg-gradient-to-r from-orange-500 to bg-orange-800 text-transparent bg-clip-text">
@@ -13,7 +13,7 @@ const WorkFlowSection = () => {
         </span>
       </h1>
 
-      <div className="flex flex-col lg:flex-row items-start justify-center lg:gap-20 gap-10 mt-16 px-6 text-left mb-32">
+      <div className="flex flex-col lg:flex-row items-start justify-center lg:gap-20 gap-10 mt-16 px-6 text-left">
         <div className="w-full lg:w-1/2">
           <img
             src={code}
@@ -24,7 +24,7 @@ const WorkFlowSection = () => {
         <div className="w-full lg:w-1/2 h-full flex flex-col justify-between py-10 gap-x-15">
           {checklistItems.map((item, index) => (
             <div key={index} className="flex items-start gap-3">
-              <div className="mt-1 text-orange-500">
+              <div className="mt-1 text-green-400">
                 <CheckCircle2 size={24} />
               </div>
               <div className="pb-13">

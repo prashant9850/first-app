@@ -12,7 +12,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80 font-[Poppins] bg-black">
+      <nav className="fixed top-0 left-0 w-full z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80 font-[Poppins] bg-black ">
         <div className="container px-4 mx-auto relative text-sm">
           <div className="flex justify-between items-center">
             <div className="flex items-center flex-shrink-0">
@@ -47,7 +47,6 @@ function Navbar() {
             </div>
           </div>
 
-          {/* Mobile Menu - shown only when mobileDrawerOpen is true */}
           {mobileDrawerOpen && (
             <div className="absolute right-4 mt-2 z-40 bg-neutral-900 w-fit p-4 flex flex-col items-end rounded-md shadow-lg lg:hidden">
               <ul className="flex flex-col space-y-4 pr-2 pt-2">
