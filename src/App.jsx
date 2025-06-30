@@ -1,4 +1,3 @@
-import viteLogo from "/vite.svg";
 import "./App.css";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
@@ -6,6 +5,7 @@ import HeroSection from "./components/heroSection.jsx";
 import FeatureSection from "./components/featureSection.jsx";
 import WorkFlowSection from "./components/WorkFlowSection.jsx";
 import Pricing from "./components/pricing.jsx";
+import Testimonials from "./components/Testimonials.jsx";
 
 function App() {
   return (
@@ -17,6 +17,8 @@ function App() {
           <FeatureSection />
           <WorkFlowSection />
           <Pricing />
+          <Testimonials />
+          <Footer />
         </div>
       </div>
     </>

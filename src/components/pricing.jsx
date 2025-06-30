@@ -1,3 +1,4 @@
+import { CheckCircle2 } from "lucide-react";
 import { pricingOptions } from "../constants";
 const Pricing = () => {
   return (
@@ -19,8 +20,22 @@ const Pricing = () => {
               </p>
               <p className="mb-8">
                 <span className="mt-6 text-5xl mr-2">{option.price}</span>
-                <span>/month</span>
+                <span className="text-neutral-400 tracing-tight">/month</span>
               </p>
+              <ul>
+                {option.features.map((features, index) => (
+                  <li key={index} className="mt-8 flex item-center">
+                    <CheckCircle2></CheckCircle2>
+                    <spam className="ml-2">{features}</spam>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="#"
+                className="inline-flex justify-center items-center text-center w-full h-12 p-5 mt-20 tracking-tight text-xl hover:bg-orange-900 border border-orange-900 rounderd transition duration-200"
+              >
+                Subscribe
+              </a>
             </div>
           </div>
         ))}
